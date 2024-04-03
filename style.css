@@ -1,6 +1,10 @@
 @font-face {
-    font-family: neo;
+    font-family: has;
     src: url(./NeueHaasDisplayBold.ttf);
+}
+@font-face {
+    font-family: mach;
+    src: url(./NeueMachina-Regular.otf);
 }
 *{
     margin: 0;
@@ -11,41 +15,109 @@ html,body{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    font-family: has;
 }
 
 #page1{
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
     background-color: #efeae3;
-    position: relative;
-    font-family: neo;
+    position:  relative;
+    padding: 0 3vw;
 }
+nav{
+    padding: 3vw 0vw;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .logo{
-    font-family: neo;
-    font-weight: lighter;
-    
+    line-height: 20px;
 }
 
-nav{
-    padding: 2vw 2vw ;
-    width: 95%;
-    /* background-color: black; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo h2{
+    font-size: 10px;
+    font: 900;
+    letter-spacing: 7px;
+}
+span{
+    color:#ff3300;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 .nav-part2{
     display: flex;
     align-items: center;
-    gap: 2vw;
+    gap: 3vw;
 }
 
-.nav-part2 h3{
+.nav-part2 h4{
     padding: 10px 20px;
-    border: 2px solid grey;
+    border: 2px solid #808080c5;
     border-radius: 50px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 11px;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
 }
+
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: #000000;
+    z-index: 9;
+    position: relative;
+}
+
+.nav-part2 h4:hover a{
+    color: #ffffff;
+}
+
+.nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 2vw;
+}
+
+#lft p{
+    width: 25vw;
+    font-size: .9vw;
+    font-family: mach;
+    line-height: 1vw;
+    font-weight: 100;
+    /* text-align: left; */
+}
+
+
+#rgt h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+}
+
